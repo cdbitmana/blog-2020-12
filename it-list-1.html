@@ -40,21 +40,44 @@
             </li>
         </ul>
     </div>
-</header><main class="flex flex-jc-c flex-grow-1">
-    <section class="stat-box con-min-width">
-        <div class = "con">
-            <ul>
-                <li>회원 수 : 1</li>
-                <li>전체 게시물 수 : 2</li>
-                <li>각 게시판 별 게시물 수                   
-                        <ul><li>공지사항 : 0</li><li>자유 : 0</li><li>IT : 2</li></ul>                       
-                </li>
-                <li>전체 게시물 조회 수 : 0</li>
-                <li>각 게시판 별 조회 수
-                    <ul><li>공지사항 : 0</li><li>자유 : 0</li><li>IT : 0</li></ul>                   
-                </ul>
-            </section>
-        </main>
+</header><main class="flex flex-dir-col flex-grow-1">
+    <section class="title-bar con-min-width">
+        <h1 class="title-bar__title-box con flex flex-jc-c"><i class="far fa-clipboard"></i><span>IT 게시판</span>
+        </h1>
+    </section>
+    <section class="board-list con-min-width">
+        <table class="con">
+            <tr class="tag">
+                <td class="font-bold cell-id">번호</td>
+                <td class="font-bold cell-title">제목</td>
+                <td class="font-bold cell-writer">작성자</td>
+                <td class="font-bold cell-regDate">작성일</td>
+                <td class="font-bold cell-hit">조회 수</td>
+                <td class="font-bold cell-recommend">추천 수</td>
+            </tr>
+            <tr>
+                <td colspan="6" class="line-separate"></td>
+            </tr>
+            <tr><td colspan="6" class ="line-separate"></td></tr><tr><td class="cell-id">2</td><td class="cell-title"><a href="it-2.html">자바 기초 2강 조건문</td><td class="cell-writer">이명학</td><td class="cell-regDate">2020-12-17 13:47:41</td><td class="cell-hit">0</td><td class="cell-recommend">0</td></tr><tr><td colspan="6" class ="line-separate"></td></tr><tr><td class="cell-id">1</td><td class="cell-title"><a href="it-1.html">자바기초 1강 변수</td><td class="cell-writer">이명학</td><td class="cell-regDate">2020-12-17 13:28:21</td><td class="cell-hit">0</td><td class="cell-recommend">0</td></tr>
+        </table>
+    </section>
+    <div class="flex-grow-1"></div>
+    <section class="page-button con-min-width">
+        <div class="con flex flex-ai-c flex-jc-s-bet">
+            <div class="flex flex-basis-100px">
+                
+                
+            </div>
+            <ul class="flex flex-jc-c flex-ai-e flex-grow-1">
+                <li class="flex flex-jc-c flex-basis-50px"><span>1</span></li>
+            </ul>
+            <div class="flex flex-basis-100px">
+                
+                
+            </div>
+        </div>
+    </section>
+</main>
     <footer class="bottom-logo-bar con-min-width">
         <div class="con flex height-100p">
             <a href="" class="logo flex">
