@@ -1,6 +1,6 @@
 /*
-SQLyog Community v13.1.5  (64 bit)
-MySQL - 10.4.6-MariaDB : Database - textBoard
+SQLyog Community v13.1.7 (64 bit)
+MySQL - 10.4.14-MariaDB : Database - textBoard
 *********************************************************************
 */
 
@@ -12,7 +12,7 @@ MySQL - 10.4.6-MariaDB : Database - textBoard
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`textBoard` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`textBoard` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 
 USE `textBoard`;
 
@@ -30,12 +30,13 @@ CREATE TABLE `article` (
   `boardId` int(10) unsigned NOT NULL,
   `hit` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `article` */
 
 insert  into `article`(`id`,`regDate`,`updateDate`,`title`,`body`,`memberId`,`boardId`,`hit`) values 
-(1,'2020-12-17 13:28:21','2020-12-17 13:28:21','자바기초 1강 변수','` ` `java\r\nint a = 5;\r\nint b = 5;\r\nint c = a + b;\r\n` ` `',1,3,0);
+(1,'2020-12-17 13:28:21','2020-12-17 13:28:21','자바기초 1강 변수','```java\r\nint a = 5;\r\nint b = 5;\r\nint c = a + b;\r\n```',1,3,0),
+(2,'2020-12-17 15:25:02','2020-12-17 15:25:59','자바기초 2강 조건문','```java\r\nint a = 5;\r\nif ( a < 10 ) {\r\nSystem.out.println(\"true\");\r\n} else if ( a > 10 ) {\r\nSystem.out.println(\"false\");\r\n}\r\n```',1,3,0);
 
 /*Table structure for table `articleRecommend` */
 
