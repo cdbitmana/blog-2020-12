@@ -21,8 +21,9 @@
        html {
          font-family: 'LotteMartDream', sans-serif;
        }
-       .tui-editor-contents{
-        font-family: 'LotteMartDream', sans-serif
+       .tui-editor-contents p{
+        font-family: 'LotteMartDream', sans-serif;
+        font-size:16px;
        }
        
        /* 노말라이즈 */
@@ -359,7 +360,7 @@
        .article_body p{
            display:block;
            padding:20px;
-           font-size:1.3rem;
+           
        }
 
        #disqus_thread{
