@@ -363,6 +363,9 @@
            font-size:1.3rem;
 
        }
+       #disqus_thread{
+           margin-top:20px;
+       }
        .article-move-button{
            border-top:2px solid black;
            box-sizing: border-box;
