@@ -352,11 +352,7 @@
        }
        .article .article_title{
            font-size:2rem;
-       }
-       .article_body{
-           border-bottom:2px solid black;
-           
-       }
+       }       
        .article_body p{
            display:block;
            padding:20px;
@@ -364,6 +360,7 @@
 
        }
        #disqus_thread{
+        border-top:2px solid black;
            padding:20px 0;
        }
        .article-move-button{
