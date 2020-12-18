@@ -361,7 +361,7 @@
        }
        #disqus_thread{
         border-top:2px solid black;
-           
+        margin-top:20px;   
        }
        .article-move-button{
            border-top:2px solid black;
