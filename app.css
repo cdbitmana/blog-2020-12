@@ -364,7 +364,7 @@
 
        }
        #disqus_thread{
-           margin-top:20px;
+           padding:20px 0;
        }
        .article-move-button{
            border-top:2px solid black;
