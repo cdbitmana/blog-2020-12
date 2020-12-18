@@ -57,7 +57,29 @@
             <div class="article_recommend flex-basis-50px"><i
                     class="fas fa-thumbs-up"></i>0</div>
         </div>
-        <div id="viewer" class="article_body flex-grow-1">```java
+        <div id="viewer" class="article_body flex-grow-1"># SWITCH
+```java
+switch (변수명) {
+          case 조건1:
+          실행코드1;
+
+          case 조건2:
+          실행코드2;
+
+          default:
+          실행코드3;
+}
+```
+
+변수가 
+조건1에 참이라면 실행코드1부터 실행코드3까지 순차적으로 실행
+조건2에 참이라면 실행코드2부터 실행코드3까지 순차적으로 실행
+조건 1과 조건2에 모두 맞지 않으면 실행코드3만 실행
+
+
+조건에 맞는 실행코드만 실행하고 싶다면 break; 를 넣어준다.
+# 예시
+```java
 int value = 1;
 
 switch (value) {
@@ -76,7 +98,8 @@ switch (value) {
          default :
          System.out.println("그 외의 숫자");
 }
-```</div>
+```
+</div>
 
         <div id="disqus_thread"></div>
         <script>
