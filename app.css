@@ -21,7 +21,7 @@
        html {
          font-family: 'LotteMartDream', sans-serif;
        }
-       .tui-editor-contents p{
+       .tui-editor-contents{
         font-family: 'LotteMartDream', sans-serif
        }
        
@@ -352,13 +352,16 @@
        }
        .article .article_title{
            font-size:2rem;
+       }
+       .article_body {
+           padding:20px 0;
        }       
        .article_body p{
            display:block;
            padding:20px;
            font-size:1.3rem;
-
        }
+
        #disqus_thread{
         border-top:2px solid black;
         margin-top:20px;   
