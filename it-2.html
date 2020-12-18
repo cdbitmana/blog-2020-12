@@ -42,9 +42,7 @@
             </li>
         </ul>
     </div>
-</header>
-
-<main class="flex flex-grow-1 flex-dir-col con-min-width">
+</header><main class="flex flex-grow-1 flex-dir-col con-min-width">
 
 
     <section class="article con flex flex-dir-col">
@@ -59,7 +57,7 @@
             <div class="article_recommend flex-basis-50px"><i
                     class="fas fa-thumbs-up"></i>0</div>
         </div>
-        <div id ="viewer" class="article_body flex-grow-1">```java
+        <div id="viewer" class="article_body flex-grow-1">```java
 int a = 5;
 if ( a < 10 ) {
 System.out.println("a < 10");
@@ -68,17 +66,22 @@ System.out.println("a > 10");
 }
 ```</div>
 
-        <section class="con-min-width reply">
-            <div class="reply__section">
-                <div class="con reply-box"><i class="fas fa-comment-alt"></i>댓글 0개</div>
-                
-            </div>
-        </section>
+        <div id="disqus_thread"></div>
+        <script>
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://blogssg.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+                Disqus.</a></noscript>
 
         <div class="con-min-width article-move-button">
             <div class="con next-article"><a href="it-1.html">이전글</a></div>
-            
-        </div>        
+
+        </div>
     </section>
 
     <section class="con article-list">
@@ -105,23 +108,23 @@ System.out.println("a > 10");
 
             <div class="con flex flex-ai-c flex-jc-s-bet">
                 <div class="flex flex-basis-100px">
-                                        
                     
-                   
+                    
+
                 </div>
                 <ul class="flex flex-jc-c flex-ai-e flex-grow-1">
                     <li class="flex flex-jc-c flex-basis-50px"><span>1</span></li>
                 </ul>
                 <div class="flex flex-basis-100px">
                     
-                                        
+                    
                 </div>
             </div>
 
         </section>
     </section>
-    
-    
+
+
 </main><footer class="bottom-logo-bar con-min-width">
     <div class="con flex height-100p">
         <a href="" class="logo flex">
