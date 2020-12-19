@@ -26,34 +26,60 @@
 </head>
 
 <body>
-    <div class="container flex flex-dir-col">
+    
+       
+        <div class="side-bar flex">
+            <div class="close-button">X</div>
+            <div class="flex flex-ai-c width-100p">
+            <ul class="width-100p">
+                <li><a class="flex flex-jc-c flex-ai-c height-100p" href="">PROFILE</a></li>
+                <li><a class="flex flex-jc-c flex-ai-c height-100p" href="">BOARD </a> 
+                       <div class="side-box width-100p">
+                        <ul>
+                            <li><a href="it-list-1.html"><span>IT게시판</span></a></li><li><a href="test-list-1.html"><span>테스트게시판</span></a></li>
+                        </ul>  
+                    </div>                
+                </li>
+                <li><a class="flex flex-jc-c flex-ai-c height-100p" href="">PORTFOLIO</a></li>
+                <li><a class="flex flex-jc-c flex-ai-c height-100p" href="">GUESTBOOK</a></li>          
+            </ul>  
+        </div>
+        </div>
+   
 
-        <header class="con-min-width top-bar flex">
-            <div class="flex menu-bar con flex">
-                <div class="flex flex-ai-c logo-box">
-                    <a href="">DLOG</a>
-                </div>
+    <div class="container flex flex-dir-col">
+        <div class="wrapper">
+        <header class="flex top-bar con-min-width">
+            <div class="con flex">
+                <div class="logo-box"><a class="height-100p flex flex-ai-c" href="">DLOG</a></div>
                 <div class="flex-grow-1"></div>
-                <ul class="flex flex-ai-c">
-                    <li class="flex flex-ai-c"><a href="">PROFILE</a></li>
-                    <li class="flex flex-ai-c">BOARD
-                        <div class="menu-bar2 con-min-width">
-                            <div class="flex con">
-                                <div class="flex-grow-1"></div>
-                                <ul class="list-box">
-                                    <li><a href="it-list-1.html"><i class="far fa-clipboard"></i><span>IT게시판</span></a></li>
+                <div class="flex menu-box1">
+                    <ul class="flex">
+                        <li><a class="flex flex-ai-c height-100p" href="">PROFILE</a></li>
+                        <li><a class="flex flex-ai-c height-100p" href="">BOARD</a>                            
+                            <div class="con-min-width menu-box2">
+                                <div class="flex con">
+                                    <div class="flex-grow-1"></div>
+                                <ul>
+                                    <li><a href="it-list-1.html"><span>IT게시판</span></a></li><li><a href="test-list-1.html"><span>테스트게시판</span></a></li>
                                 </ul>
                             </div>
-                        </div>
-                    </li>
-                    <li class="flex flex-ai-c"><a href="">PORTFOLIO</a></li>
-                    <li class="flex flex-ai-c"><a href="">GUESTBOOK</a></li>
-                </ul>
+                            </div>
+                        </li>
+                        <li><a class="flex flex-ai-c height-100p" href="">PORTFOLIO</a></li>
+                        <li><a class="flex flex-ai-c height-100p" href="">GUESTBOOK</a></li>
+                        <li><span class="flex flex-ai-c height-100p menu-button" href="">=</span></li>
+                    </ul>
+                </div>
             </div>
-        </header><main class="flex flex-grow-1 flex-dir-col con-min-width">
+        </header>
+    </div>
+    
+    
+<main class="flex flex-grow-1 flex-dir-col con-min-width">
 
 
-    <section class="article con flex flex-dir-col">
+    <section class="article main-con flex flex-dir-col">
         <div class="article__title-bar flex flex-jc-s-bet flex-ai-c">
             <div class="article_id flex-basis-50px">1</div>
             <div class="article_title flex-grow-1">자바) Switch 구문</div>
@@ -121,18 +147,18 @@ switch (value) {
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
                 Disqus.</a></noscript>
 
-        <div class="con-min-width article-move-button">
+        <div class="article-move-button">
             <div class="con next-article"><a href="it-2.html">다음글</a></div>
 
         </div>
     </section>
 
-    <section class="con article-list">
-        <section class="title-bar con-min-width">
-            <h1 class="title-bar__title-box con flex flex-jc-c"><i class="far fa-clipboard"></i><span>IT 게시판</span></h1>
+    <section class="main-con article-list">
+        <section class="title-bar">
+            <h1 class="title-bar__title-box flex flex-jc-c"><i class="far fa-clipboard"></i><span>IT 게시판</span></h1>
         </section>
-        <section class="board-list con-min-width">
-            <table class="con">
+        <section class="board-list">
+            <table class="">
                 <tr class="tag">
                     <td class="font-bold cell-id">번호</td>
                     <td class="font-bold cell-title">제목</td>
@@ -147,9 +173,10 @@ switch (value) {
                 <tr><td colspan="6" class ="line-separate"></td></tr><tr><td class="cell-id">2</td><td class="cell-title"><a href="it-2.html">자바) 배열 정렬하는 식</td><td class="cell-writer">이명학</td><td class="cell-regDate">2020-12-17 15:25:02</td><td class="cell-hit">0</td><td class="cell-recommend">0</td></tr><tr><td colspan="6" class ="line-separate"></td></tr><tr><td class="cell-id"> &gt; </td><td class="cell-title"><a href="it-1.html">자바) Switch 구문</td><td class="cell-writer">이명학</td><td class="cell-regDate">2020-12-17 13:28:21</td><td class="cell-hit">0</td><td class="cell-recommend">0</td></tr>
             </table>
         </section>
-        <section class="page-button con-min-width">
+        <div class="main-con flex-grow-1"></div>
+        <section class="page-button">
 
-            <div class="con flex flex-ai-c flex-jc-s-bet">
+            <div class="flex flex-ai-c flex-jc-s-bet">
                 <div class="flex flex-basis-100px">
                     
                     
