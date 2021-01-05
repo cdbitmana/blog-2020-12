@@ -1,22 +1,65 @@
+function home_main__Body__init() {
 
-var ctx = document.getElementById('myChart').getContext('2d');
-var chart = new Chart(ctx, {
+    var body = document.querySelectorAll('.home-main__article-box__body');
+    for (var i = 0; i < body.length; i++) {
+        var initialValue = body[i].innerHTML.trim();
+        initialValue = initialValue.replace(/&gt;/gi, ">");
+        initialValue = initialValue.replace(/&lt;/gi, "<");
+        var viewer = new toastui.Editor.factory({
+
+            el: body[i],
+            initialValue: initialValue,
+            viewer: true,
+            plugins: [toastui.Editor.plugin.codeSyntaxHighlight]
+
+        });
+    }
+}
+home_main__Body__init();
+
+
+function ArticleDetail__Body__init() {
+
+    var body = document.querySelector('.article_body');
+    if(body == null){
+        return;
+    }
+    var initialValue = body.innerHTML.trim();
+    initialValue = initialValue.replace(/&gt;/gi, ">");
+    initialValue = initialValue.replace(/&lt;/gi, "<");
+
+    var viewer = new toastui.Editor.factory({
+
+        el: body,
+        initialValue: initialValue,
+        viewer: true,
+        plugins: [toastui.Editor.plugin.codeSyntaxHighlight]
+
+    });
+}
+ArticleDetail__Body__init();
+
+/* chart.js api 시작 */
+var articleHit1 = document.getElementById('articleHitChart1');var chart1 = new Chart(articleHit1, {type: 'doughnut',data: {labels: ['공지사항입니다. 😄'],datasets: [{data: [0],backgroundColor:['red','orange','yellow','green','blue','navy','purple']}]},options: {}});var articleHit2 = document.getElementById('articleHitChart2');var chart2 = new Chart(articleHit2, {type: 'doughnut',data: {labels: ['자바) Switch 구문','자바) 배열 정렬하는 식','MySQL) 문자열 합치기 CONCAT','MySQL) INNER JOIN','자바) 폴더와 하위파일 삭제하는 메소드','HTML,CSS) box-sizing 속성','JAVASCRIPT) replace를 replaceAll처럼 사용하기'],datasets: [{data: [2,2,2,2,1,0,0],backgroundColor:['red','orange','yellow','green','blue','navy','purple']}]},options: {}});
+/*
+var articleHit = document.getElementById('articleHitChart').getContext('2d');
+var chart = new Chart(articleHit, {
     // The type of chart we want to create
     type: 'doughnut',
 
     // The data for our dataset
     data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-        datasets: [{
-            label: 'My First dataset',
-            data: [0, 10, 5, 2, 20, 30, 45],
-            backgroundColor:['red','orange','yellow','green','blue','navy','purple']
+        labels: ['a','b','c','d','e','f','g'],
+        datasets: [{            
+            data: [1,2,3,4,5,6,7],
+            backgroundColor:['red','orange','yellow']
         }]
     },
-
     // Configuration options go here
     options: {}
 });
+*/
+/* chart.js api 끝 */
 
 $(window).on('scroll',function(){
 if($(window).scrollTop() >= 25){
@@ -78,24 +121,6 @@ $(".side-bar__menu-box1 > ul > li:nth-child(2)").mouseleave(function () {
     $(".side-bar__menu-box1 > ul > li:nth-child(2) ~ li").css("transform", "translateY(0%)");
 });
 
-function home_main__Body__init() {
-
-    var body = document.querySelectorAll('.home-main__article-box__body');
-    for (var i = 0; i < body.length; i++) {
-        var initialValue = body[i].innerHTML.trim();
-        initialValue = initialValue.replace(/&gt;/gi, ">");
-        initialValue = initialValue.replace(/&lt;/gi, "<");
-        var viewer = new toastui.Editor.factory({
-
-            el: body[i],
-            initialValue: initialValue,
-            viewer: true,
-            plugins: [toastui.Editor.plugin.codeSyntaxHighlight]
-
-        });
-    }
-}
-home_main__Body__init();
 
 
 
@@ -131,23 +156,6 @@ function moveleft() {
 moveleft();
 
 
-function ArticleDetail__Body__init() {
 
-    var body = document.querySelector('.article_body');
-    if(body == null){
-        return;
-    }
-    var initialValue = body.innerHTML.trim();
-    initialValue = initialValue.replace(/&gt;/gi, ">");
-    initialValue = initialValue.replace(/&lt;/gi, "<");
 
-    var viewer = new toastui.Editor.factory({
 
-        el: body,
-        initialValue: initialValue,
-        viewer: true,
-        plugins: [toastui.Editor.plugin.codeSyntaxHighlight]
-
-    });
-}
-ArticleDetail__Body__init();
