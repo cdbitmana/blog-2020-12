@@ -18,8 +18,8 @@
     <meta name="title" content="DLOG" />
     <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
     <meta name="copyright" content="DLOG" />
-    <meta name="pubdate" content="2021-01-06T10:57:00" />
-    <meta name="lastmod" content="2021-01-06T10:57:00" />
+    <meta name="pubdate" content="2021-01-06T19:00:04" />
+    <meta name="lastmod" content="2021-01-06T19:00:04" />
     <!-- OPENGRAPH -->
     <meta property="og:site_name" content="DLOG" />
     <meta property="og:type" content="website" />
@@ -30,8 +30,8 @@
     <meta property="og:image:alt" content="blog.hailrain.site" />
     <meta property="og:image:width" content="486" />
     <meta property="og:image:height" content="254" />
-    <meta property="og:updated_time" content="2021-01-06T10:57:00" />
-    <meta property="og:pubdate" content="2021-01-06T10:57:00" />
+    <meta property="og:updated_time" content="2021-01-06T19:00:04" />
+    <meta property="og:pubdate" content="2021-01-06T19:00:04" />
     <meta property="og:url" content="https://blog.hailrain.site" />
     <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -83,7 +83,7 @@
                 <li><a class="flex flex-jc-c flex-ai-c height-100p" href="">BOARD </a>
                     <div class="side-bar__menu-box2 width-100p">
                         <ul class="width-100p">
-                            <li><a href="notice-list-1.html"><span>공지사항게시판</span></a></li><li><a href="it-list-1.html"><span>IT게시판</span></a></li>
+                            <li><a href="notice-list-1.html"><span>공지사항게시판</span></a></li><li><a href="it-list-1.html"><span>IT게시판</span></a></li><li><a href="test-list-1.html"><span>테스트게시판</span></a></li>
                         </ul>
                     </div>
                 </li>
@@ -116,7 +116,7 @@
                             <li><a class="height-100p" href="">BOARD</a>
                                 <div class="width-100p menu-box2">
                                     <ul>
-                                        <li><a href="notice-list-1.html"><span>공지사항게시판</span></a></li><li><a href="it-list-1.html"><span>IT게시판</span></a></li>
+                                        <li><a href="notice-list-1.html"><span>공지사항게시판</span></a></li><li><a href="it-list-1.html"><span>IT게시판</span></a></li><li><a href="test-list-1.html"><span>테스트게시판</span></a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -131,12 +131,27 @@
             </header>
         </div>
 
-        <a class="scrolltop-button" href="#top"><i class="fas fa-arrow-up"></i></a><main class="con-min-width flex flex-dir-col flex-grow-1">
+        <a class="scrolltop-button" href="#top"><i class="fas fa-arrow-up"></i></a><!-- lodash 불러오기 -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+
+<!-- vue 불러오기 -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<main class="con-min-width flex flex-dir-col flex-grow-1">
+
     <section class="title-bar main-con">
         <h1 class="title-bar__title-box flex flex-jc-c"><span>IT 게시판</span>
         </h1>
     </section>
-    <section class="main-con board-list">
+
+    <section class="article-list-wrap main-con board-list">
+        <div class="searchBox">
+            <form>
+                <span>검색</span>
+                <input @input="searchKeywordInputed" :value="searchKeyword" type="text">
+                <button><i class="fas fa-search"></i></button>
+            </form>
+        </div>
         <table class="width-100p">
             <tr class="tag">
                 <td class="font-bold cell-id">번호</td>
@@ -146,20 +161,22 @@
                 <td class="font-bold cell-hit">조회 수</td>
                 <td class="font-bold cell-recommend">추천 수</td>
             </tr>            
-            <tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">1</td><td class="cell-title"><a href="it-detail-1.html">자바) Switch 구문</td><td class="cell-writer">이명학</td><td class="cell-regDate">2020-12-17 13:28:21</td><td class="cell-hit">4</td><td class="cell-recommend">0</td></tr>
+            <tbody v-for="article in filtered"><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">{{article.id}}</td><td class="cell-title"><a href="it-detail-{{article.id}}.html">{{article.title}}</td><td class="cell-writer">{{article.writer}}</td><td class="cell-regDate">{{article.regDate}}</td><td class="cell-hit"></td><td class="cell-recommend"></td></tr></tbody>
         </table>
     </section>
+
+
     <div class="main-con flex-grow-1"></div>
     <section class="page-button main-con">
         <div class="flex flex-ai-c flex-jc-s-bet">
-            <div class="flex flex-basis-100px">
+            <div class="lastmovebutton flex flex-basis-100px">
                 <div class="flex flex-basis-50px"><a href="it-list-1.html"> << </a></div>
                 
             </div>
             <ul class="flex flex-jc-c flex-ai-e flex-grow-1">
                 <li class="flex flex-jc-c flex-basis-50px"><a href="it-list-1.html"> 1</a></li><li class="flex flex-jc-c flex-basis-50px"><span>2</span></li>
             </ul>
-            <div class="flex flex-basis-100px">
+            <div class="firstmovebutton flex flex-basis-100px">
                 
                 <div class="flex flex-basis-50px"><a href="it-list-2.html"> >> </a></div>
             </div>
