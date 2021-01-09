@@ -18,8 +18,8 @@
     <meta name="title" content="DLOG" />
     <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
     <meta name="copyright" content="DLOG" />
-    <meta name="pubdate" content="2021-01-08T15:36:46" />
-    <meta name="lastmod" content="2021-01-08T15:36:46" />
+    <meta name="pubdate" content="2021-01-09T20:21:12" />
+    <meta name="lastmod" content="2021-01-09T20:21:12" />
     <!-- OPENGRAPH -->
     <meta property="og:site_name" content="DLOG" />
     <meta property="og:type" content="website" />
@@ -46,8 +46,8 @@ int arr  new intN
     <meta property="og:image:alt" content="blog.hailrain.site" />
     <meta property="og:image:width" content="486" />
     <meta property="og:image:height" content="254" />
-    <meta property="og:updated_time" content="2021-01-08T15:36:46" />
-    <meta property="og:pubdate" content="2021-01-08T15:36:46" />
+    <meta property="og:updated_time" content="2021-01-09T20:21:12" />
+    <meta property="og:pubdate" content="2021-01-09T20:21:12" />
     <meta property="og:url" content="https://blog.hailrain.site" />
     <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -197,6 +197,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.cs
     src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight.min.js"></script>
 <!-- 디스커스 댓글 기능 추가 -->
 <script id="dsq-count-scr" src="//blogssg.disqus.com/count.js" async></script>
+<!-- lodash 불러오기 -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+
+<!-- vue 불러오기 -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+
 <main class="flex flex-grow-1 flex-dir-col con-min-width">
 
 
@@ -255,10 +263,16 @@ int[] arr = new int[N];
         </div>
     </section>
 
-    <section class="main-con article-list">
-        <section class="title-bar">
-            <h1 class="title-bar__title-box flex flex-jc-c"><span>IT 게시판</span></h1>
-        </section>
+    <section class="title-bar">
+        <h1 class="title-bar__title-box flex flex-jc-c"><a href="it-list-1.html"><span>IT 게시판</span></a></h1>
+    </section>
+    <section class="article-list-wrap main-con article-list">        
+        <div class="searchBox">
+            <div>
+                <input @input="searchKeywordInputed" :value="searchKeyword" type="text" @keyup="searchKeywordInputedEnter(this)">
+                <button @click="searchKeywordClick"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
         <section class="board-list">
             <table class="width-100p">
                 <tr class="tag">
@@ -269,7 +283,7 @@ int[] arr = new int[N];
                     <td class="font-bold cell-hit">조회 수</td>
                     <td class="font-bold cell-recommend">추천 수</td>
                 </tr>
-                <tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">17</td><td class="cell-title"><a href="it-detail-17.html">Vue) Array.prototype.forEach()</td><td class="cell-writer">이명학</td><td class="cell-regDate">2021-01-06 10:43:58</td><td class="cell-hit">3</td><td class="cell-recommend">0</td></tr><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">16</td><td class="cell-title"><a href="it-detail-16.html">Vue) Array.prototype.some()</td><td class="cell-writer">이명학</td><td class="cell-regDate">2021-01-06 10:42:44</td><td class="cell-hit">2</td><td class="cell-recommend">0</td></tr><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">15</td><td class="cell-title"><a href="it-detail-15.html">Vue) Array.prototype.filter()</td><td class="cell-writer">이명학</td><td class="cell-regDate">2021-01-06 10:40:09</td><td class="cell-hit">4</td><td class="cell-recommend">0</td></tr><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">14</td><td class="cell-title"><a href="it-detail-14.html">Vue) Array.prototype.map()</td><td class="cell-writer">이명학</td><td class="cell-regDate">2021-01-06 10:36:51</td><td class="cell-hit">3</td><td class="cell-recommend">0</td></tr><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">7</td><td class="cell-title"><a href="it-detail-7.html">JAVASCRIPT) replace를 replaceAll처럼 사용하기</td><td class="cell-writer">이명학</td><td class="cell-regDate">2020-12-21 21:55:28</td><td class="cell-hit">2</td><td class="cell-recommend">0</td></tr><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">6</td><td class="cell-title"><a href="it-detail-6.html">HTML,CSS) box-sizing 속성</td><td class="cell-writer">이명학</td><td class="cell-regDate">2020-12-21 21:45:32</td><td class="cell-hit">2</td><td class="cell-recommend">0</td></tr><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">5</td><td class="cell-title"><a href="it-detail-5.html">자바) 폴더와 하위파일 삭제하는 메소드</td><td class="cell-writer">이명학</td><td class="cell-regDate">2020-12-20 09:06:01</td><td class="cell-hit">3</td><td class="cell-recommend">0</td></tr><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">4</td><td class="cell-title"><a href="it-detail-4.html">MySQL) INNER JOIN</td><td class="cell-writer">이명학</td><td class="cell-regDate">2020-12-17 15:25:02</td><td class="cell-hit">2</td><td class="cell-recommend">0</td></tr><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">3</td><td class="cell-title"><a href="it-detail-3.html">MySQL) 문자열 합치기 CONCAT</td><td class="cell-writer">이명학</td><td class="cell-regDate">2020-12-17 15:25:02</td><td class="cell-hit">3</td><td class="cell-recommend">0</td></tr><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id"> &gt; </td><td class="cell-title"><a href="it-detail-2.html">자바) 배열 정렬하는 식</td><td class="cell-writer">이명학</td><td class="cell-regDate">2020-12-17 15:25:02</td><td class="cell-hit">4</td><td class="cell-recommend">0</td></tr>
+                <tbody v-for="article in articles"><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">{{article.id}}</td><td class="cell-title"><a :href="'it-detail-'+article.id+'.html'">{{article.title}}</td><td class="cell-writer">{{article.writer}}</td><td class="cell-regDate">{{article.regDate}}</td><td class="cell-hit">{{article.hitCount}}</td><td class="cell-recommend">{{article.likesCount}}</td></tr></tbody>
             </table>
         </section>
         <div class="main-con flex-grow-1"></div>

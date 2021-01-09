@@ -18,8 +18,8 @@
     <meta name="title" content="DLOG" />
     <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
     <meta name="copyright" content="DLOG" />
-    <meta name="pubdate" content="2021-01-08T15:36:46" />
-    <meta name="lastmod" content="2021-01-08T15:36:46" />
+    <meta name="pubdate" content="2021-01-09T20:21:12" />
+    <meta name="lastmod" content="2021-01-09T20:21:12" />
     <!-- OPENGRAPH -->
     <meta property="og:site_name" content="DLOG" />
     <meta property="og:type" content="website" />
@@ -30,8 +30,8 @@
     <meta property="og:image:alt" content="blog.hailrain.site" />
     <meta property="og:image:width" content="486" />
     <meta property="og:image:height" content="254" />
-    <meta property="og:updated_time" content="2021-01-08T15:36:46" />
-    <meta property="og:pubdate" content="2021-01-08T15:36:46" />
+    <meta property="og:updated_time" content="2021-01-09T20:21:12" />
+    <meta property="og:pubdate" content="2021-01-09T20:21:12" />
     <meta property="og:url" content="https://blog.hailrain.site" />
     <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -137,11 +137,12 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
 
 <!-- vue 불러오기 -->
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
 <main class="con-min-width flex flex-dir-col flex-grow-1">
 
     <section class="title-bar main-con">
-        <h1 class="title-bar__title-box flex flex-jc-c"><span>IT 게시판</span>
+        <h1 class="title-bar__title-box flex flex-jc-c"><a href="it-list-1.html"><span>IT 게시판</span></a>
         </h1>
     </section>
 
@@ -161,20 +162,16 @@
                 <td class="font-bold cell-hit">조회 수</td>
                 <td class="font-bold cell-recommend">추천 수</td>
             </tr>            
-            <tbody v-for="article in filtered"><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">{{article.id}}</td><td class="cell-title"><a :href="'it-detail-'+article.id+'.html'">{{article.title}}</td><td class="cell-writer">{{article.writer}}</td><td class="cell-regDate">{{article.regDate}}</td><td class="cell-hit"></td><td class="cell-recommend"></td></tr></tbody>
+            <tbody v-for="article in articles"><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">{{article.id}}</td><td class="cell-title"><a :href="'it-detail-'+article.id+'.html'">{{article.title}}</td><td class="cell-writer">{{article.writer}}</td><td class="cell-regDate">{{article.regDate}}</td><td class="cell-hit">{{article.hitCount}}</td><td class="cell-recommend">{{article.likesCount}}</td></tr></tbody>
         </table>
-    </section>
 
-
-    <div class="main-con flex-grow-1"></div>
-    <section class="page-button main-con">
-        <div class="flex flex-ai-c flex-jc-s-bet">
+        <div class="page-button flex flex-ai-c flex-jc-s-bet">
             <div class="lastmovebutton flex flex-basis-100px">
                 <div class="flex flex-basis-50px"><a href="it-list-1.html"> << </a></div>
                 
             </div>
             <ul class="flex flex-jc-c flex-ai-e flex-grow-1">
-                <li class="flex flex-jc-c flex-basis-50px"><span>1</span></li><li class="flex flex-jc-c flex-basis-50px"><a href="it-list-2.html"> 2</a></li>
+                <li v-for="page in pages" class="flex flex-jc-c flex-basis-50px"><span :class="{currentPage: mode}">{{page.index}}</span></li>
             </ul>
             <div class="firstmovebutton flex flex-basis-100px">
                 
@@ -184,7 +181,7 @@
     </section>
 </main>
 
-<script src="article_list.js"></script><footer class="bottom-logo-bar con-min-width">
+<script src="common.js"></script><footer class="bottom-logo-bar con-min-width">
     <div class="con flex">        
             <a class="bottom-logo-bar__logo-box" href="index.html" class=""></a>        
         <div class="copyright-box">
