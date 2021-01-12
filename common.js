@@ -283,7 +283,7 @@ const articleListBoxVue = new Vue({
         
 	}
 });
-articleListBoxVue.pages();
+
 /* 게시물 검색 기능 끝 */
     
     
