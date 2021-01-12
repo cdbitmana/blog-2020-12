@@ -227,7 +227,7 @@ const articleListBoxVue = new Vue({
                 qr.addClass("currentPage");
             }
             if($('span.currentPageCheck:not(:contains('+ cur +'))')){
-                qr.removeClass("currentPage");
+                $('span.currentPageCheck:not(:contains('+ cur +'))').removeClass("currentPage");
             }
 
 			return this.articleList.filter((row) => {
