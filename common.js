@@ -268,13 +268,24 @@ const articleListBoxVue = new Vue({
             for(let i = start; i <= end ; i++){
                 pages.push({index:i});
             }
-           return pages;
+
+           pages.forEach((row,i) => {
+
+            if(row.index == this.currentPage){
+                pages[i].addClass("currentPage");
+            }
+
+           });
+
+           
+
         }
         
 	}
 });
-if($(".currentPageCheck").html() == this.currentPage){
-    $(".currentPageCheck").addClass("currentPage");
+let cur = $(".currentPageCheck");
+if(cur.innerHTML() == this.currentPage){
+    cur.addClass("currentPage");
  }
 /* 게시물 검색 기능 끝 */
     
