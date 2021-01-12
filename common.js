@@ -210,7 +210,6 @@ const articleListBoxVue = new Vue({
         },
         movePage:function(page){
             this.currentPage = page.index;
-            console.log(this.currentPage);
         }
 	},
 	computed: {
@@ -270,16 +269,13 @@ const articleListBoxVue = new Vue({
                 pages.push({index:i});
             }
            return pages;
-        },
-        mode:function(){
-            if($(".currentPageCheck").html() == this.currentPage){
-               $(".currentPageCheck").addClass("currentPage");
-            }
-            
         }
         
 	}
 });
+if($(".currentPageCheck").html() == this.currentPage){
+    $(".currentPageCheck").addClass("currentPage");
+ }
 /* 게시물 검색 기능 끝 */
     
     
