@@ -270,9 +270,10 @@ const articleListBoxVue = new Vue({
            return pages;
         },
         mode:function(){
-            if($(".currentPageCheck").innerHTML==this.currentPage){
+            if($(".currentPageCheck").html().trim() == this.currentPage){
                 return true;
             }
+            
             
         }
         
