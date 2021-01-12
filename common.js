@@ -269,24 +269,16 @@ const articleListBoxVue = new Vue({
                 pages.push({index:i});
             }
 
-           pages.forEach((row,i) => {
-
-            if(row.index == this.currentPage){
-                pages[i].addClass("currentPage");
-            }
-
-           });
-
            return pages;
 
         }
         
 	}
 });
-let cur = $(".currentPageCheck");
-if(cur.innerHTML() == this.currentPage){
-    cur.addClass("currentPage");
- }
+let cur = articleListBoxVue.currentPage;
+if($('span.currentPageCheck:contains('+ cur +')')){
+    $('span.currentPageCheck:contains('+ cur +')').addClass("currentPage");
+}
 /* 게시물 검색 기능 끝 */
     
     
