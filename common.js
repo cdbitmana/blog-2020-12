@@ -200,10 +200,12 @@ const articleListBoxVue = new Vue({
         },500),
         searchKeywordClick:function(){
             this.searchResult = this.searchKeyword;
+            this.currentPage = 1;
         },
         searchKeywordInputedEnter:function(){
             if(event.keyCode==13){
                 this.searchResult = this.searchKeyword;
+                this.currentPage = 1;
             }
         },
         movePage:function(page){
