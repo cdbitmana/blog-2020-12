@@ -632,11 +632,11 @@
        .page-button  a:hover {
            text-decoration: underline;
        }
-       .page-button > ul > li > .currentPageCheck {
+       .page-button > ul > li > .currentPage {
            font-weight: bold;
            font-size:1.4rem;
        }
-       .page-button > ul > li > :not(.currentPageCheck):hover {
+       .page-button > ul > li > :not(.currentPage):hover {
         cursor: pointer;
     }
        .lastmovebutton {
