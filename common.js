@@ -219,8 +219,17 @@ const articleListBoxVue = new Vue({
 		filtered: function() {            
 			if (this.filterKey.length == 0) {
 				return this.articleList;
-			}
+            }
             
+            const cur = this.currentPage;
+            const qr = $('span.currentPageCheck:contains('+ cur +')');
+            if(qr){
+                qr.addClass("currentPage");
+            }
+            if($('span.currentPageCheck:not(:contains('+ cur +'))')){
+                qr.removeClass("currentPage");
+            }
+
 			return this.articleList.filter((row) => {
 				const keys = ['title', 'writer', 'body', 'regDate'];
 
@@ -269,14 +278,7 @@ const articleListBoxVue = new Vue({
                 pages.push({index:i});
             }
 
-            let cur = this.currentPage;
-            let qr = $('span.currentPageCheck:contains('+ cur +')');
-            if(qr){
-                qr.addClass("currentPage");
-            }
-            if($('span.currentPageCheck:not(:contains('+ cur +'))')){
-                qr.removeClass("currentPage");
-            }
+            
            return pages;
 
         }
