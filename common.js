@@ -275,7 +275,9 @@ const articleListBoxVue = new Vue({
             if(qr){
                 qr.addClass("currentPage");
             }
-            
+            if(!qr){
+                qr.removeClass("currentPage");
+            }
            return pages;
 
         }
