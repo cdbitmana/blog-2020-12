@@ -277,7 +277,7 @@ const articleListBoxVue = new Vue({
 
            });
 
-           
+           return pages;
 
         }
         
