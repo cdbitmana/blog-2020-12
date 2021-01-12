@@ -192,7 +192,8 @@ const articleListBoxVue = new Vue({
 		articleList: articleList,
         searchKeyword: '',
         searchResult:'',
-        currentPage:1
+        currentPage:1,
+        mode:true
 	},
 	methods: {
 		searchKeywordInputed: _.debounce(function(e) {
@@ -205,6 +206,10 @@ const articleListBoxVue = new Vue({
             if(event.keyCode==13){
                 this.searchResult = this.searchKeyword;
             }
+        },
+        movePage:function(page){
+            this.currentPage = page.index;
+            console.log(this.currentPage);
         }
 	},
 	computed: {
@@ -264,15 +269,10 @@ const articleListBoxVue = new Vue({
                 pages.push({index:i});
             }
            return pages;
-        },
-        mode:function(){
-            return true;
         }
         
 	}
 });
-
-
 /* 게시물 검색 기능 끝 */
     
     
