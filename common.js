@@ -192,8 +192,7 @@ const articleListBoxVue = new Vue({
 		articleList: articleList,
         searchKeyword: '',
         searchResult:'',
-        currentPage:1,
-        mode:true
+        currentPage:1
 	},
 	methods: {
 		searchKeywordInputed: _.debounce(function(e) {
@@ -269,6 +268,12 @@ const articleListBoxVue = new Vue({
                 pages.push({index:i});
             }
            return pages;
+        },
+        mode:function(){
+            if($(".currentPageCheck").innerHTML==this.currentPage){
+                return true;
+            }
+            
         }
         
 	}
