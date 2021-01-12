@@ -274,7 +274,7 @@ const articleListBoxVue = new Vue({
             if(qr){
                 qr.addClass("currentPage");
             }
-            if(!qr){
+            if($('span.currentPageCheck:not(:contains('+ cur +'))')){
                 qr.removeClass("currentPage");
             }
            return pages;
@@ -283,11 +283,6 @@ const articleListBoxVue = new Vue({
         
 	}
 });
-let cur = articleListBoxVue.currentPage;
-let qr = $('span.currentPageCheck:contains('+ cur +')');
-if(qr){
-    qr.addClass("currentPage");
-}
 /* 게시물 검색 기능 끝 */
     
     
