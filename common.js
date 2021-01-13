@@ -186,14 +186,14 @@ $.get(
 	'json'
 );
 
-let currentPage = 1;
+
 const articleListBoxVue = new Vue({
 	el: ".article-list-wrap",
 	data: {
 		articleList: articleList,
         searchKeyword: '',
         searchResult:'',
-        currentPage : currentPage
+        currentPage : 1
 	},
 	methods: {
 		searchKeywordInputed: _.debounce(function(e) {
@@ -201,16 +201,16 @@ const articleListBoxVue = new Vue({
         },500),
         searchKeywordClick:function(){
             this.searchResult = this.searchKeyword;
-            currentPage = 1;
+            this.currentPage = 1;
         },
         searchKeywordInputedEnter:function(){
             if(event.keyCode==13){
                 this.searchResult = this.searchKeyword;
-                currentPage = 1;
+                this.currentPage = 1;
             }
         },
         movePage:function(page){
-            currentPage = page;
+            this.currentPage = page;
         }
     },   
 	computed: {
@@ -289,7 +289,7 @@ const articleListBoxVue = new Vue({
 });
 window.onload = function(){
     console.log("실행");
-    let asd =  $('span.currentPageCheck:contains('+currentPage+')');
+    let asd =  $('span.currentPageCheck:contains(1)');
     console.log(asd);
       asd.addClass("currentPage");
 }
