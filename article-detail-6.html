@@ -18,8 +18,8 @@
     <meta name="title" content="DLOG" />
     <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
     <meta name="copyright" content="DLOG" />
-    <meta name="pubdate" content="2021-01-22T13:43:07" />
-    <meta name="lastmod" content="2021-01-22T13:43:07" />
+    <meta name="pubdate" content="2021-01-23T02:20:57" />
+    <meta name="lastmod" content="2021-01-23T02:20:57" />
     <!-- OPENGRAPH -->
     <meta property="og:site_name" content="DLOG" />
     <meta property="og:type" content="website" />
@@ -43,8 +43,8 @@ width100px  height100px 인 영역에 bordermarginpadding등의 요소가 추가
     <meta property="og:image:alt" content="blog.hailrain.site" />
     <meta property="og:image:width" content="486" />
     <meta property="og:image:height" content="254" />
-    <meta property="og:updated_time" content="2021-01-22T13:43:07" />
-    <meta property="og:pubdate" content="2021-01-22T13:43:07" />
+    <meta property="og:updated_time" content="2021-01-23T02:20:57" />
+    <meta property="og:pubdate" content="2021-01-23T02:20:57" />
     <meta property="og:url" content="https://blog.hailrain.site" />
     <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -152,7 +152,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.cs
                   
 
                     <ul class="menu_box_2__board">
-                        <li><a href="notice-list.html?board=notice"><span>공지사항게시판</span></a></li><li><a href="it-list.html?board=it"><span>IT게시판</span></a></li>
+                        <li><a href="notice-list.html?board=notice&page=1"><span>공지사항게시판</span></a></li><li><a href="it-list.html?board=it&page=1"><span>IT게시판</span></a></li>
                           <!--  
                         <li><a href="notice-list.html">공지사항 게시판</a></li>
                         <li><a href="">IT 게시판</a></li>
@@ -196,7 +196,7 @@ border-box 는 width속성과 height속성이 테두리를 포함한 영역의 �
 
 (width:100px , height:100px 인 영역에 border,margin,padding등의 요소가 추가되면 border와 padding의 크기만큼 width와 height가 줄어든다. margin은 영역의 바깥에 여백을 주는것이기 때문에 상관이 없다.)
 </div>
-        <div class="article_tags"><a href="article_tag.html?tag=HTML">#HTML </a><a href="article_tag.html?tag=CSS">#CSS </a></div>
+        <div class="article_tags"><a href="article_tag.html?tag=HTML&page=1">#HTML </a><a href="article_tag.html?tag=CSS&page=1">#CSS </a></div>
         <div id="disqus_thread"></div>
         <script>
             var disqus_config = function () {
@@ -213,8 +213,8 @@ border-box 는 width속성과 height속성이 테두리를 포함한 영역의 �
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
                 Disqus.</a></noscript>
 
-        <div class="article-move-button">
-            <div class="con next-article"><a href="article-detail-7.html?board=it">다음글</a></div><div class="con next-article"><a href="article-detail-5.html?board=it">이전글</a></div>
+        <div class="article-move-vue article-move-button">
+            <div class="con next-article"><a :href="'article-detail-7.html?board=it&page='+currentPage">다음글</a></div><div class="con next-article"><a :href="'article-detail-5.html?board=it&page='+currentPage">이전글</a></div>
 
         </div>
     </section>
@@ -239,7 +239,7 @@ border-box 는 width속성과 height속성이 테두리를 포함한 영역의 �
                     <td class="font-bold cell-hit">조회 수</td>
                     <td class="font-bold cell-recommend">추천 수</td>
                 </tr>
-                <tbody class="articles_notExists"><tr><td colspan="6">검색 결과가 없습니다.</td></tr></tbody><tbody class="articles_exists" v-for="article in articles"><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">{{article.id}}</td><td class="cell-title"><a :href="'article-detail-'+article.id+'.html?board=it&id='+article.id">{{article.title}}</a></td><td class="cell-writer">{{article.writer}}</td><td class="cell-regDate">{{article.regDate}}</td><td class="cell-hit">{{article.hitCount}}</td><td class="cell-recommend">{{article.likesCount}}</td></tr></tbody>
+                <tbody class="articles_notExists"><tr><td colspan="6">검색 결과가 없습니다.</td></tr></tbody><tbody class="articles_exists" v-for="article in articles"><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">{{article.id}}</td><td class="cell-title"><a :href="'article-detail-'+article.id+'.html?board=it&id='+article.id+'&page='+currentPage">{{article.title}}</a></td><td class="cell-writer">{{article.writer}}</td><td class="cell-regDate">{{article.regDate}}</td><td class="cell-hit">{{article.hitCount}}</td><td class="cell-recommend">{{article.likesCount}}</td></tr></tbody>
             </table>
         </section>
         
